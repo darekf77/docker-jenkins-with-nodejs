@@ -14,7 +14,7 @@ ENV JENKINS_SLAVE_AGENT_PORT ${agent_port}
 
 RUN wget http://nodejs.org/dist/v6.9.5/node-v6.9.5-linux-x64.tar.gz 
 RUN tar --strip-components 1 -xzvf node-v* -C /usr/local
-RUN npm i -g ts-node typescript rimraf
+RUN npm i -g ts-node typescript rimraf yarn karma http-server @angular/cli
 
 # Jenkins is run with user `jenkins`, uid = 1000
 # If you bind mount a volume from the host or a data container, 
